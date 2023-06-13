@@ -12,7 +12,14 @@ const Budget = () => {
 		
 		if(val<totalExpenses) {
 			alert("You cannot reduce the budget that is already allocated!");
-		} else {
+		} 
+
+        else if (val>20000){
+            alert("The budget can't exceed 20000!");
+        }
+        
+        
+        else {
 			dispatch({
 				type: 'SET_BUDGET',
 				payload: val,
